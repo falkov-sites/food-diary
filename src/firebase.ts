@@ -4,13 +4,13 @@ import { getFirestore } from "firebase/firestore";
 
 // Замените значения на конфиг вашего проекта Firebase.
 const firebaseConfig = {
-  apiKey: "AIzaSyDPtwBkKijqRoYRSpRYiXw28XaemuKU41w",
-  authDomain: "food-diary-ivan.firebaseapp.com",
-  projectId: "food-diary-ivan",
-  storageBucket: "food-diary-ivan.firebasestorage.app",
-  messagingSenderId: "835371645197",
-  appId: "1:835371645197:web:b2e2bda2fba33b2ad75844",
-  measurementId: "G-ZHQZYGF3DG",
+  apiKey: "*******************",
+  authDomain: "*******.firebaseapp.com",
+  projectId: "*******",
+  storageBucket: "*******.firebasestorage.app",
+  messagingSenderId: "*****",
+  appId: "*****:web:*****",
+  measurementId: "*****",
 };
 
 const app = initializeApp(firebaseConfig);
