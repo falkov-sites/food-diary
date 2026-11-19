@@ -1,0 +1,1 @@
+{"root":["./src/env.d.ts","./src/firebase.ts","./src/main.ts","./src/types.ts","./src/services/authservice.ts","./src/services/entriesservice.ts","./src/theme-palette/palettes.ts","./src/theme-palette/usepalettetheme.ts","./src/app.vue","./src/components/snowflakes.vue","./src/components/themetoggle.vue","./src/theme-palette/themepalettepicker.vue"],"version":"5.9.3"}

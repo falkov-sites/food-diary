@@ -1,0 +1,123 @@
+@import 'tailwindcss';
+
+@import './_animations.css';
+@import './_theme.css';
+@import '../theme-palette/theme-palette.css';
+
+@theme {
+  --breakpoint-iphone: 390px;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family:
+    'Avenir Next',
+    'SF Pro Text',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+._panel {
+  @apply border-border rounded-xl border-2;
+  @apply text-panel-foreground bg-panel-background;
+}
+
+._input-label {
+  @apply text-panel-foreground/70 mb-1 block text-center text-sm;
+}
+
+._input-value {
+  @apply border-border focus:outline-border w-full rounded-xl border-2 px-1 py-3 text-center text-lg focus:outline-2;
+}
+
+._btn-add-record {
+  @apply border-border my-2 w-full cursor-pointer rounded-xl border-2 p-4 text-base font-semibold disabled:opacity-60;
+  background-image: linear-gradient(
+    to bottom,
+    var(--theme-gradient-start),
+    var(--theme-gradient-middle),
+    var(--theme-gradient-end)
+  );
+}
+
+._panel-title {
+  @apply text-center text-base font-semibold;
+}
+._all-labels {
+  @apply text-panel-foreground/50 mb-2 flex justify-between px-2 *:basis-1/4 *:text-center *:text-base;
+}
+
+._all-data {
+  @apply mb-2 flex justify-between px-2 font-semibold *:basis-1/4 *:text-center *:text-base;
+}
+
+._swipe-row {
+  @apply relative mb-1 overflow-hidden rounded-2xl text-sm;
+}
+
+._swipe-delete-wrap {
+  @apply absolute inset-y-0 right-0 flex items-stretch justify-end;
+  width: 92px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease-out;
+}
+
+._swipe-row--active ._swipe-delete-wrap {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+._swipe-delete-btn {
+  @apply h-full w-23 cursor-pointer border-0 px-2 text-sm font-semibold text-white;
+  background-color: #dc2626;
+}
+
+._swipe-content {
+  @apply relative z-10 rounded-2xl transition-transform duration-200 ease-out;
+  background-color: var(--theme-background);
+  touch-action: pan-y;
+}
+
+._swipe-content--dragging {
+  transition: none;
+}
+
+._row-delete-toggle {
+  @apply h-6 w-6 cursor-pointer border-0 bg-transparent p-0 leading-none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+  outline: none;
+}
